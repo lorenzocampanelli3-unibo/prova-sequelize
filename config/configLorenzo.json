@@ -1,0 +1,30 @@
+{
+  "development": {
+    "username": "sa",
+    "password": "lillobillo96",
+    "database": "PROVA_SEQUELIZE",
+    "host": "localhost",
+    "dialect": "mssql",
+    "dialectOptions": {
+      "options": {
+        "cryptoCredentialsDetails": {
+          "minVersion": "TLSv1"
+        }
+      }
+    }
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "root",
+    "password": null,
+    "database": "database_production",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  }
+}
