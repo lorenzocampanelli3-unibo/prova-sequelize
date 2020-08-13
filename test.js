@@ -4,8 +4,62 @@ const db = require('./models/index');
 
 (async () => {
     try {
-        await db.sequelize.sync({force: true});
-        // console.log('Tables created');
+        const queryInterface = db.sequelize.getQueryInterface();
+        const DataTypes = db.Sequelize;
+        // await queryInterface.createTable('Users', {
+        // userId: {
+        //     type: DataTypes.INTEGER,
+        //     autoIncrement: true,
+        //     allowNull: false,
+        //     primaryKey: true
+        //   },
+        //   firstName: {
+        //     type: DataTypes.STRING(50),
+        //     allowNull: false
+        //   },
+        //   lastName:{
+        //     type: DataTypes.STRING(50),
+        //     allowNull: false
+        //   },
+        //   email: {
+        //     type: DataTypes.STRING(50),
+        //     allowNull: false,
+        //     unique: true
+        //   }
+        // });
+        // await queryInterface.createTable('Posts', {
+        //     postId: {
+        //       type: DataTypes.INTEGER,
+        //       autoIncrement: true,
+        //       allowNull: false,
+        //       primaryKey: true
+        //     },
+        //     title: {
+        //       type: DataTypes.STRING(50),
+        //       allowNull: false
+        //     },
+        //     body: {
+        //       type: DataTypes.TEXT,
+        //       allowNull: true
+        //     },
+        //     author: {
+        //       type: DataTypes.INTEGER,
+        //       allowNull: false,
+        //       references:{
+        //         model: {
+        //           tableName: 'Users'
+        //         },
+        //         key: 'userId'
+        //       }
+        //     }
+        //   });
+        await queryInterface.dropAllTables();
+        // await db.sequelize.query("SET FOREIGN_KEY_CHECKS = 0");
+        // await db.sequelize.sync({force: true});
+        // await db.sequelize.query("SET FOREIGN_KEY_CHECKS = 1");
+        console.log('Tables created');
+        // await db.sequelize.drop();
+        // console.log('Tables dropped');
         // await db.User.create({
         //     userId: 1,
         //     firstName: "Lillo"
