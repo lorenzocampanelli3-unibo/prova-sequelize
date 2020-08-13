@@ -1,10 +1,17 @@
 {
   "development": {
     "username": "sa",
-    "password": "lillobillo96",
+    "password": "Admin@2014",
     "database": "PROVA_SEQUELIZE",
-    "host": "127.0.0.1",
-    "dialect": "mssql"
+    "host": "localhost",
+    "dialect": "mssql",
+    "dialectOptions": {
+      "options": {
+        "cryptoCredentialsDetails": {
+          "minVersion": "TLSv1"
+        }
+      }
+    }
   },
   "test": {
     "username": "root",
